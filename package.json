@@ -1,0 +1,26 @@
+{
+  "name": "wikisearchbar",
+  "version": "1.0.0",
+  "description": "Responsive wikipedia search bar",
+  "main": "testServer.js",
+  "scripts": {
+    "start": "nodemon testServer.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrianJFeldman/wikiSearch.git"
+  },
+  "author": "brianjoelfeldman@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BrianJFeldman/wikiSearch/issues"
+  },
+  "homepage": "https://github.com/BrianJFeldman/wikiSearch#readme",
+  "dependencies": {
+    "express": "^4.16.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
