@@ -4,7 +4,6 @@
     --Highlight: #25ACF1;
     --fontFam: 'Roboto',Helvetica;
     --movementTime: all 0.3s linear;
-    --fadeIn: opacity 1s linear 0.2s;
     --borderFade: border 0.3s ease-in-out;
     --mobileBorderFade: border 0.1s ease-in-out;
 }
@@ -24,8 +23,6 @@ body{
     flex-direction: column;
     font-family: var(--fontFam);
     align-items: center;
-    width: 100%;
-    height: 100%;
 
 }
 .title{
@@ -35,11 +32,13 @@ body{
     -o-transition: var(--movementTime);
     transition: var(--movementTime);
     padding: calc( 100px + 8% ) 0;
+    width: 21em;
 }
 .title.searching{
     padding:15px 0 0 0;
 }
-@media screen and (max-device-width: 480px) {
+/*media queries adjust sizing for mobile phones and tablets, but not small laptops or iPad Pros  */
+@media screen and (max-device-width: 770px) {
    .title { 
        padding: calc(150px + 20%) 0;
         font-size: 200%;
@@ -59,8 +58,7 @@ body{
     padding: 0 15px;
 }
 .logo.searching{
-    opacity:0;
-    height: 0;
+    display: none;
 }
 span{
     color: var(--Highlight);
@@ -78,11 +76,12 @@ input{
     font: lighter 1em var(--fontFam) ;
     border: 1px solid black;
     outline: none;
+    z-index: 2147483647;
 }
 input::placeholder{
     color: #797575;
 }
-@media screen and (max-device-width: 480px) {
+@media screen and (max-device-width: 770px) {
     input {
     -webkit-transition: var(--mobileBorderFade);
     -moz-transition: var(--mobileBorderFade);
@@ -96,7 +95,7 @@ input::placeholder{
 input:focus{
     border: 1px solid var(--Highlight);
 }
-@media screen and (max-device-width: 480px) {
+@media screen and (max-device-width: 770px) {
     input:focus{
         border: 2px solid var(--Highlight);
     }
@@ -114,7 +113,7 @@ input:focus{
 .resultsList li:hover{
 background-color: #EDEDED;
 }
-@media screen and (max-device-width: 480px) {
+@media screen and (max-device-width: 770px) {
     .resultsList{
         padding-right: 25%;
     }
@@ -151,11 +150,6 @@ background-color: #EDEDED;
     padding: 5px 0 0;
 }
 .extract{
-    -webkit-transition: var(--fadeIn);
-    -moz-transition: var(--fadeIn);
-    -ms-transition: var(--fadeIn);
-    -o-transition: var(--fadeIn);
-    transition: var(--fadeIn);
     top:-500px;
     margin: 15% 0 0;
     font: 300 0.9em var(--fontFam);
