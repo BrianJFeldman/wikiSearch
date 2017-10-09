@@ -91,22 +91,41 @@ input:focus, textarea:focus{
     -o-transition: var(--mobileBorderFade);
     transition: var(--mobileBorderFade);
     margin: 15% 0 0;
-    font-size: 1.8em;
+    font-size: 1.6em;
     }
     input:focus, textarea:focus{
         border: 2px solid var(--Highlight);
     }
 }
 .resultsList{
-    padding: 20px 0 0 0;
+    padding: 10px 0 0 0;
     list-style: none;
-    display: block;
     width: 50%;
     min-width: 200px;
     max-width: 500px;
 }
+.resultsList.populated{
+    height:85%;
+}
 .resultsList li{
-    height: 8%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border-radius: 5%;
+    height: 8.5%;
     color: var(--Highlight);
     font: medium 1em var(--fontFam);
+}
+.resultsList li:hover{
+background-color: #EDEDED;
+}
+@media screen and (max-device-width: 480px) {
+    .resultsList{
+        padding-right: 25%;
+    }
+    .resultsList li{
+        width:150%;
+        height:7.5%;
+        font-size: 2em;
+    }
 }
