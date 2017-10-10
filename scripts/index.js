@@ -5,7 +5,7 @@ let nodes = d.querySelectorAll('.result');
 const categoryCache = {};
 let querying = false;
 let showingExtract = false;
-let currString;
+let currString ="";
 
 function checkIfSearching(str) {
     if (str !== "" && !title.classList.contains("searching")) {
